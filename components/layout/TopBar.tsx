@@ -12,20 +12,20 @@ export default function TopBar() {
                     <div className="flex items-center gap-4 sm:gap-6">
 
                         <a
-                            href="tel:+919038819066"
+                            href="tel:+919903811311"
                             className="flex items-center gap-2 text-xs sm:text-sm transition-colors hover:text-gold"
                         >
                             <Phone className="h-4 w-4 text-gold flex-shrink-0" />
-                            <span>+91 90388 19066</span>
+                            <span>+91 99038 11311</span>
                         </a>
 
                         {/* Hide email on very small screens */}
                         <a
-                            href="mailto:info@lakhdataar.com"
+                            href="mailto:Sales.lakhdataat@gmail.com"
                             className="hidden md:flex items-center gap-2 text-sm transition-colors hover:text-gold"
                         >
                             <Mail className="h-4 w-4 text-gold" />
-                            <span>info@lakhdataar.com</span>
+                            <span>Sales.lakhdataat@gmail.com</span>
                         </a>
 
                     </div>
