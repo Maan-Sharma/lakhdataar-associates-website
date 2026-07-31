@@ -7,69 +7,54 @@ export default function Hero() {
     return (
         <section
             id="home"
-            className="relative isolate overflow-hidden bg-brand"
-        >
+            className="
+relative
+isolate
+min-h-screen
+lg:min-h-[920px]
+overflow-hidden
+bg-brand
+"        >
             {/* Background */}
             <HeroBackground />
 
             {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#081B33]/90 via-[#081B33]/65 to-[#081B33]/30" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#081B33]/90 via-[#081B33]/70 to-[#081B33]/40" />
 
             {/* Bottom Fade */}
-            <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#081B33] to-transparent" />
+            <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-[#081B33] to-transparent" />
 
-            <div className="relative z-20 container-custom">
-                <div
-                    className="
-          grid
-          min-h-[calc(100vh-130px)]
-          grid-cols-1
-          items-center
-
-          py-16
-
-          md:py-24
-
-          lg:grid-cols-12
-          lg:gap-12
-          lg:py-32
-          "
-                >
-                    {/* LEFT */}
+            <div className="relative z-20 flex h-full items-center">
+                <div className="container-custom w-full">
 
                     <div
                         className="
-            lg:col-span-7
-            xl:col-span-6
-            "
-                    >
-                        <HeroContent />
-
-                        <div className="mt-16">
-                            <HeroStats />
-                        </div>
-                    </div>
-
-                    {/* RIGHT */}
-
-                    <div
-                        className="
-            hidden
-
-            lg:col-span-5
-
-            lg:flex
-
+            grid
+            lg:grid-cols-12
             items-center
 
-            justify-center
+            pt-20
+            pb-10
+
+            sm:pt-24
+            md:pt-28
+            lg:pt-12
             "
                     >
-                        {/* Reserved for Future Video / Floating Cards */}
+                        <div className="lg:col-span-7 xl:col-span-6">
+
+                            <HeroContent />
+
+                            <div className="mt-8 lg:mt-10">
+                                <HeroStats />
+                            </div>
+
+                        </div>
+
                     </div>
+
                 </div>
             </div>
-
             <ScrollIndicator />
         </section>
     );

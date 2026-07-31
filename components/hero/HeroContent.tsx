@@ -1,18 +1,74 @@
 "use client";
 
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import SplitType from "split-type";
+
 import HeroButtons from "./HeroButtons";
-import { useHeroAnimation } from "../hooks/useHeroAnimation"; // adjust path
 
 export default function HeroContent() {
-    const heroRef = useRef<HTMLDivElement>(null);
+    const titleRef = useRef<HTMLHeadingElement>(null);
 
-    useHeroAnimation();
+    useEffect(() => {
+        if (!titleRef.current) return;
+
+        const split = new SplitType(titleRef.current, {
+            types: "lines,words,chars",
+        });
+
+        gsap.set(split.chars, {
+            yPercent: 120,
+            opacity: 0,
+        });
+
+        const tl = gsap.timeline({
+            defaults: {
+                ease: "power4.out",
+            },
+        });
+
+        tl.from(".hero-badge", {
+            opacity: 0,
+            y: 20,
+            duration: 0.6,
+        })
+            .to(
+                split.chars,
+                {
+                    yPercent: 0,
+                    opacity: 1,
+                    stagger: 0.02,
+                    duration: 1,
+                },
+                "-=0.2"
+            )
+            .from(
+                ".hero-desc",
+                {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.6,
+                },
+                "-=0.5"
+            )
+            .from(
+                ".hero-buttons",
+                {
+                    opacity: 0,
+                    y: 20,
+                    duration: 0.6,
+                },
+                "-=0.4"
+            );
+
+        return () => {
+            split.revert();
+            tl.kill();
+        };
+    }, []);
 
     return (
-        <div ref={heroRef} className="max-w-3xl">
-
-            {/* Badge */}
+        <div className="max-w-3xl">
             <div className="hero-badge inline-flex items-center gap-3 rounded-full border border-white/15 bg-white/5 px-5 py-2 backdrop-blur-md">
                 <span className="h-2 w-2 rounded-full bg-gold" />
 
@@ -21,41 +77,26 @@ export default function HeroContent() {
                 </span>
             </div>
 
-
-            <h1 className="hero-title mt-8 text-[clamp(3rem,7vw,6rem)] font-semibold leading-[1] tracking-[-0.04em] text-white">
+            <h1
+                ref={titleRef}
+                className="hero-title mt-8 text-[clamp(2.8rem,6vw,5rem)] font-bold leading-[0.95] tracking-[-0.04em] text-white"
+            >
                 LAKHDATAAR
-
-                <span className="mt-2 block text-amber-400">
-                    ASSOCIATES
-                </span>
-
+                <br />
+                <span className="text-gold">ASSOCIATES</span>
+                <br />
                 INDIA LLP
             </h1>
 
-
-
-            <h3 className="hero-desc mt-8 text-[clamp(3rem,7vw,6rem)] font-medium leading-[1] text-white/70 md:text-4xl">
-                Fueling Industries.
-
-                <span className="mt-2  text-gold">
-                    {" "} Powering Growth.
-                </span>
-
-
-            </h3>
-
-
             <p className="hero-desc mt-8 max-w-xl text-base leading-8 text-white/70 md:text-lg">
-                Lakhdataar Associates India LLP supplies premium industrial
-                raw materials with dependable logistics, transparent pricing,
-                and long-term partnerships across India.
+                Lakhdataar Associates India LLP supplies premium industrial raw
+                materials with dependable logistics, transparent pricing, and
+                long-term partnerships across India.
             </p>
 
-
-            <div className="hero-buttons mt-12">
+            <div className="hero-buttons mt-10">
                 <HeroButtons />
             </div>
-
         </div>
     );
 }
