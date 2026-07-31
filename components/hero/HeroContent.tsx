@@ -25,12 +25,24 @@ export default function HeroContent() {
             <h1 className="hero-title mt-8 text-[clamp(3rem,7vw,6rem)] font-semibold leading-[1] tracking-[-0.04em] text-white">
                 LAKHDATAAR
 
-                <span className="mt-2 block text-gold">
+                <span className="mt-2 block text-amber-400">
                     ASSOCIATES
                 </span>
 
                 INDIA LLP
             </h1>
+
+
+
+            <h3 className="hero-desc mt-8 text-[clamp(3rem,7vw,6rem)] font-medium leading-[1] text-white/70 md:text-4xl">
+                Fueling Industries.
+
+                <span className="mt-2  text-gold">
+                    {" "} Powering Growth.
+                </span>
+
+
+            </h3>
 
 
             <p className="hero-desc mt-8 max-w-xl text-base leading-8 text-white/70 md:text-lg">

@@ -21,11 +21,11 @@ export default function TopBar() {
 
                         {/* Hide email on very small screens */}
                         <a
-                            href="mailto:Sales.lakhdataat@gmail.com"
+                            href="mailto:sales.lakhdataat@gmail.com"
                             className="hidden md:flex items-center gap-2 text-sm transition-colors hover:text-gold"
                         >
                             <Mail className="h-4 w-4 text-gold" />
-                            <span>Sales.lakhdataat@gmail.com</span>
+                            <span>sales.lakhdataat@gmail.com</span>
                         </a>
 
                     </div>
