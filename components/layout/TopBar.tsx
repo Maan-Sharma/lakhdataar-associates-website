@@ -5,7 +5,7 @@ export default function TopBar() {
         <div className="w-full bg-brand text-white border-b border-white/10">
             <div className="container-custom">
 
-                <div className="flex h-10 lg:h-11 items-center justify-between">
+                <div className="flex h-10 items-center justify-between lg:h-11">
 
                     {/* Left */}
 
@@ -13,7 +13,7 @@ export default function TopBar() {
 
                         <a
                             href="tel:+919903811311"
-                            className="flex items-center gap-2 text-xs sm:text-sm transition-colors hover:text-gold"
+                            className="flex items-center gap-2 text-[11px] transition-colors hover:text-gold sm:text-sm"
                         >
                             <Phone className="h-4 w-4 text-gold flex-shrink-0" />
                             <span>+91 99038 11311</span>
@@ -21,11 +21,11 @@ export default function TopBar() {
 
                         {/* Hide email on very small screens */}
                         <a
-                            href="mailto:sales.lakhdataat@gmail.com"
+                            href="mailto:sales.lakhdataar@gmail.com"
                             className="hidden md:flex items-center gap-2 text-sm transition-colors hover:text-gold"
                         >
                             <Mail className="h-4 w-4 text-gold" />
-                            <span>sales.lakhdataat@gmail.com</span>
+                            <span>sales.lakhdataar@gmail.com</span>
                         </a>
 
                     </div>

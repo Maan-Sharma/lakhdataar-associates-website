@@ -30,9 +30,11 @@ export default function WhyCard({ item }: WhyCardProps) {
 
                 flex
                 h-full
-                min-h-[320px]
+                min-h-72
 
                 flex-col
+
+                sm:min-h-80
 
                 overflow-hidden
 
@@ -43,7 +45,7 @@ export default function WhyCard({ item }: WhyCardProps) {
 
                 bg-white/90
 
-                p-6
+                p-5
 
                 shadow-[0_15px_50px_rgba(2,6,23,.06)]
 
@@ -55,7 +57,8 @@ export default function WhyCard({ item }: WhyCardProps) {
                 hover:border-gold/50
                 hover:shadow-[0_35px_90px_rgba(8,27,51,.15)]
 
-                sm:p-8
+                sm:p-6
+                md:p-8
             "
         >
 
@@ -99,7 +102,7 @@ export default function WhyCard({ item }: WhyCardProps) {
 
                     w-0
 
-                    bg-gradient-to-r
+                    bg-linear-to-r
 
                     from-gold
 
@@ -178,7 +181,7 @@ export default function WhyCard({ item }: WhyCardProps) {
                 className="
                     mt-5
 
-                    flex-grow
+                    grow
 
                     text-sm
 

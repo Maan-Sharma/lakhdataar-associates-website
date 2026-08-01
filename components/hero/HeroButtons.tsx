@@ -2,68 +2,168 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function HeroButtons() {
     return (
-        <div className="flex flex-col gap-4 sm:flex-row">
+        <div
+            className="
+                flex
+                w-full
+                flex-col
+                gap-3
+
+                sm:flex-row
+                sm:gap-4
+
+                lg:gap-5
+            "
+        >
+
+            {/* Request Quote */}
 
             <button
+                aria-label="Request a Quote"
                 className="
-                group
-                flex
-                h-12
-                items-center
-                justify-center
-                gap-3
-                rounded-lg
-                bg-gold
-                px-8
-                text-sm
-                font-semibold
-                text-brand
-                transition-all
-                duration-300
+                    group
 
-                hover:-translate-y-1
-                hover:shadow-xl
+                    flex
+                    w-full
+                    sm:w-auto
 
-                sm:h-14
-                sm:text-base
+                    min-h-[52px]
+
+                    items-center
+                    justify-center
+
+                    gap-3
+
+                    rounded-xl
+
+                    bg-gold
+
+                    px-6
+                    py-3.5
+
+                    text-sm
+                    font-semibold
+
+                    text-brand
+
+                    shadow-lg
+                    shadow-black/10
+
+                    transition-all
+                    duration-300
+
+                    active:scale-95
+
+                    sm:min-w-[190px]
+
+                    lg:px-8
+                    lg:py-4
+                    lg:text-base
+
+
+                    hover:-translate-y-1
+                    hover:shadow-2xl
+
+                    motion-safe:hover:-translate-y-1
                 "
             >
-                Request a Quote
+
+                <span className="whitespace-nowrap">
+                    Request a Quote
+                </span>
+
 
                 <ArrowRight
                     size={18}
-                    className="transition-transform duration-300 group-hover:translate-x-1"
+                    strokeWidth={2.5}
+                    className="
+                        shrink-0
+
+                        transition-transform
+                        duration-300
+
+                        group-hover:translate-x-1
+                    "
                 />
+
             </button>
+
+
+
+            {/* Explore Products */}
 
             <button
+                aria-label="Explore Products"
                 className="
-                flex
-                h-12
-                items-center
-                justify-center
-                gap-3
-                rounded-lg
-                border
-                border-white/20
-                bg-white/10
-                px-8
-                text-sm
-                font-medium
-                text-white
-                backdrop-blur-md
-                transition-all
-                duration-300
+                    group
 
-                hover:bg-white/20
+                    flex
+                    w-full
+                    sm:w-auto
 
-                sm:h-14
-                sm:text-base
+                    min-h-[52px]
+
+                    items-center
+                    justify-center
+
+                    gap-3
+
+                    rounded-xl
+
+                    border
+                    border-white/20
+
+                    bg-white/10
+
+                    px-6
+                    py-3.5
+
+
+                    text-sm
+                    font-medium
+
+                    text-white
+
+                    backdrop-blur-md
+
+
+                    transition-all
+                    duration-300
+
+
+                    active:scale-95
+
+
+                    sm:min-w-[190px]
+
+
+                    lg:px-8
+                    lg:py-4
+                    lg:text-base
+
+
+
+                    hover:bg-white/20
+
                 "
             >
-                <Phone size={18} />
-                Explore Products
+
+                <Phone
+                    size={18}
+                    strokeWidth={2}
+                    className="
+                        shrink-0
+                    "
+                />
+
+
+                <span className="whitespace-nowrap">
+                    Explore Products
+                </span>
+
+
             </button>
+
 
         </div>
     );

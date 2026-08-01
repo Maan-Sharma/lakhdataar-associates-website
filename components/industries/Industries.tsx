@@ -14,7 +14,9 @@ export default function Industries() {
 
             bg-brand
 
-            py-24
+            py-16
+
+            sm:py-20
 
             lg:py-32
         "
@@ -66,17 +68,13 @@ export default function Industries() {
                         className="
                         mt-8
 
-                        text-4xl
+                        text-[clamp(2rem,5vw,3.75rem)]
 
                         font-black
 
                         leading-tight
 
                         text-white
-
-                        sm:text-5xl
-
-                        lg:text-6xl
                     "
                     >
                         Trusted Across India's
@@ -92,11 +90,14 @@ export default function Industries() {
 
                         max-w-3xl
 
-                        text-lg
+                        text-sm
 
-                        leading-8
+                        leading-7
 
                         text-white/70
+
+                        sm:text-base
+                        sm:leading-8
 
                         lg:text-xl
                     "
@@ -112,17 +113,21 @@ export default function Industries() {
 
                 <div
                     className="
-                    mt-20
+                    mt-14
 
                     grid
 
                     grid-cols-2
 
-                    gap-5
+                    gap-3
 
+                    sm:mt-16
+                    sm:gap-5
                     sm:grid-cols-3
 
-                    lg:grid-cols-4
+                    md:grid-cols-4
+
+                    lg:grid-cols-5
 
                     xl:grid-cols-7
                 "

@@ -2,301 +2,581 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
 
+
 @custom-variant dark (&:is(.dark *));
 
+
+
+/* =====================================================
+   THEME CONFIGURATION
+===================================================== */
+
 @theme inline {
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+
   --font-sans: var(--font-sans);
   --font-mono: var(--font-geist-mono);
   --font-heading: var(--font-sans);
+
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
-  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+
   --color-sidebar-accent: var(--sidebar-accent);
-  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+
   --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+
   --color-sidebar-foreground: var(--sidebar-foreground);
   --color-sidebar: var(--sidebar);
+
+
   --color-chart-5: var(--chart-5);
   --color-chart-4: var(--chart-4);
   --color-chart-3: var(--chart-3);
   --color-chart-2: var(--chart-2);
   --color-chart-1: var(--chart-1);
+
+
   --color-ring: var(--ring);
   --color-input: var(--input);
   --color-border: var(--border);
+
   --color-destructive: var(--destructive);
+
+
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
+
+
   --color-muted-foreground: var(--muted-foreground);
   --color-muted: var(--muted);
+
+
   --color-secondary-foreground: var(--secondary-foreground);
   --color-secondary: var(--secondary);
+
+
   --color-primary-foreground: var(--primary-foreground);
   --color-primary: var(--primary);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-popover: var(--popover);
+
+
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
+
+
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+
+
+
+  --radius-sm: calc(var(--radius) * .6);
+  --radius-md: calc(var(--radius) * .8);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
   --radius-4xl: calc(var(--radius) * 2.6);
+
 }
 
-:root {
-  --radius: 0.625rem;
 
-  /* Base */
+
+
+/* =====================================================
+   LIGHT THEME
+===================================================== */
+
+:root {
+
+
+  --radius: .625rem;
+
+
   --background: #ffffff;
   --foreground: #081b33;
 
-  /* Cards */
+
   --card: #ffffff;
   --card-foreground: #081b33;
 
-  /* Popover */
+
   --popover: #ffffff;
   --popover-foreground: #081b33;
 
-  /* Brand */
+
+
   --primary: #081b33;
   --primary-foreground: #ffffff;
+
 
   --secondary: #d4a937;
   --secondary-foreground: #081b33;
 
+
   --accent: #10284a;
   --accent-foreground: #ffffff;
 
-  /* UI */
+
+
   --muted: #f8fafc;
   --muted-foreground: #64748b;
 
+
   --border: #e5e7eb;
   --input: #e5e7eb;
+
   --ring: #d4a937;
+
 
   --destructive: #ef4444;
 
-  /* Charts */
+
+
   --chart-1: #081b33;
   --chart-2: #d4a937;
   --chart-3: #475569;
   --chart-4: #94a3b8;
   --chart-5: #cbd5e1;
 
-  /* Sidebar */
+
+
   --sidebar: #081b33;
   --sidebar-foreground: #ffffff;
+
   --sidebar-primary: #d4a937;
   --sidebar-primary-foreground: #081b33;
+
   --sidebar-accent: #10284a;
   --sidebar-accent-foreground: #ffffff;
+
   --sidebar-border: #1e3a5f;
+
   --sidebar-ring: #d4a937;
 
-  /* Custom Brand Colors */
+
+
+  /* Brand */
+
   --navy: #081b33;
   --navy-light: #10284a;
+
   --gold: #d4a937;
   --gold-light: #e8bf57;
+
 
   --gray-100: #f8fafc;
   --gray-200: #e5e7eb;
   --gray-400: #94a3b8;
   --gray-600: #475569;
 
-  --overlay: rgba(8, 27, 51, 0.72);
+
+  --overlay: rgba(8, 27, 51, .72);
+
 }
 
+
+
+/* =====================================================
+   DARK THEME
+===================================================== */
+
 .dark {
+
+
   --background: #081b33;
   --foreground: #ffffff;
+
 
   --card: #10284a;
   --card-foreground: #ffffff;
 
+
   --popover: #10284a;
   --popover-foreground: #ffffff;
+
 
   --primary: #d4a937;
   --primary-foreground: #081b33;
 
+
   --secondary: #10284a;
   --secondary-foreground: #ffffff;
+
 
   --accent: #1b3d6b;
   --accent-foreground: #ffffff;
 
+
+
   --muted: #10284a;
   --muted-foreground: #cbd5e1;
 
-  --border: rgba(255, 255, 255, 0.1);
-  --input: rgba(255, 255, 255, 0.1);
+
+  --border: rgba(255, 255, 255, .1);
+  --input: rgba(255, 255, 255, .1);
+
   --ring: #d4a937;
 
+
   --sidebar: #081b33;
-  --sidebar-foreground: #ffffff;
-  --sidebar-primary: #d4a937;
-  --sidebar-primary-foreground: #081b33;
-  --sidebar-accent: #10284a;
-  --sidebar-accent-foreground: #ffffff;
-  --sidebar-border: rgba(255, 255, 255, 0.1);
-  --sidebar-ring: #d4a937;
+
 }
+
+
+
+
+/* =====================================================
+   BASE
+===================================================== */
+
 
 @layer base {
+
+
   * {
+
     @apply border-border outline-ring/50;
+
   }
 
-  body {
-    @apply bg-background text-foreground;
-  }
+
 
   html {
-    @apply font-sans;
-  }
-}
 
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
+    @apply font-sans;
+
+    scroll-behavior: smooth;
+
   }
+
+
 
   body {
+
     @apply bg-background text-foreground;
+
+    min-height: 100vh;
+
+    overflow-x: hidden;
+
   }
 
-  html {
-    @apply font-sans;
-  }
+
 }
 
-/* ⬇️ ADD THIS HERE */
+
+
+
+/* =====================================================
+   BRAND UTILITIES
+===================================================== */
+
 
 @layer utilities {
+
+
   .container-width {
-    @apply mx-auto max-w-7xl px-6 lg:px-8;
+
+    width: min(1320px, calc(100% - 48px));
+
+    margin-inline: auto;
+
   }
+
+
+
+  .container-custom {
+
+    width: min(1400px, calc(100% - 96px));
+
+    margin-inline: auto;
+
+  }
+
+
 
   .bg-brand {
-    background-color: var(--navy);
+
+    background: var(--navy);
+
   }
+
+
+
+  .text-brand {
+
+    color: var(--navy);
+
+  }
+
+
 
   .bg-gold {
-    background-color: var(--gold);
+
+    background: var(--gold);
+
   }
+
+
 
   .text-gold {
+
     color: var(--gold);
+
   }
+
+
 
   .border-gold {
+
     border-color: var(--gold);
-  }
-
-  .hero-overlay {
-    background: linear-gradient(90deg,
-        rgba(8, 27, 51, 0.95) 0%,
-        rgba(8, 27, 51, 0.88) 35%,
-        rgba(8, 27, 51, 0.45) 70%,
-        rgba(8, 27, 51, 0.08) 100%);
-  }
-}
-
-.container-width {
-  width: min(1320px, calc(100% - 48px));
-  margin-inline: auto;
-}
-
-.bg-brand {
-  background: var(--navy);
-}
-
-.text-brand {
-  color: var(--navy);
-}
-
-.bg-gold {
-  background: var(--gold);
-}
-
-.text-gold {
-  color: var(--gold);
-}
-
-@layer utilities {
-  .container-custom {
-    width: min(1440px, calc(100% - 48px));
-    margin-inline: auto;
-  }
-
-  @media (max-width: 768px) {
-    .container-custom {
-      width: calc(100% - 32px);
-    }
-  }
-}
-
-@layer utilities {
-
-  .container-custom {
-    width: min(1440px, calc(100% - 48px));
-    margin-inline: auto;
-  }
-
-  @media(max-width:768px) {
-
-    .container-custom {
-
-      width: calc(100% - 32px);
-
-    }
 
   }
+
+
 
   .hero-overlay {
 
-    background: linear-gradient(90deg,
-        rgba(8, 27, 51, .92) 0%,
-        rgba(8, 27, 51, .78) 35%,
-        rgba(8, 27, 51, .45) 70%,
-        rgba(8, 27, 51, .15) 100%);
+    background:
+      linear-gradient(90deg,
+        rgba(8, 27, 51, 0.96),
+        rgba(8, 27, 51, 0.72),
+        rgba(8, 27, 51, 0.24));
 
   }
 
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.10) 1px, transparent 1px);
+    background-size: 42px 42px;
+    mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 95%);
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 95%);
+  }
+
+
+
 }
 
-.container-custom {
-  width: min(1400px, calc(100% - 48px));
-  margin-inline: auto;
+
+
+
+/* =====================================================
+   RESPONSIVE SYSTEM
+===================================================== */
+
+
+
+img,
+video,
+svg {
+
+  max-width: 100%;
+  height: auto;
+
 }
 
-@media (max-width:1024px) {
 
-  .container-custom {
+
+@media(max-width:1280px) {
+
+
+  .container-custom,
+  .container-width {
+
+    width: calc(100% - 64px);
+
+  }
+
+
+}
+
+
+
+@media(max-width:1024px) {
+
+
+  html {
+
+    font-size: 15px;
+
+  }
+
+
+
+  .container-custom,
+  .container-width {
+
+    width: calc(100% - 48px);
+
+  }
+
+
+
+  .hero-overlay {
+
+
+    background:
+
+      linear-gradient(180deg,
+        rgba(8, 27, 51, .95),
+        rgba(8, 27, 51, .75));
+
+
+  }
+
+
+
+}
+
+
+
+@media(max-width:768px) {
+
+
+  html {
+
+    font-size: 14px;
+
+  }
+
+
+
+  .container-custom,
+  .container-width {
+
     width: calc(100% - 32px);
+
   }
+
+
+
+  h1 {
+
+    font-size: clamp(2rem, 8vw, 3rem);
+
+  }
+
+
+
+  h2 {
+
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+
+  }
+
+
+
+  section {
+
+    padding-block: 60px;
+
+  }
+
+
+
+  .left-card,
+  .right-card {
+
+
+    transform: none !important;
+
+
+  }
+
+
 
 }
 
-@media (max-width:640px) {
 
-  .container-custom {
+
+@media(max-width:480px) {
+
+
+  .container-custom,
+  .container-width {
+
+
     width: calc(100% - 24px);
+
+
   }
 
+
+
+  html {
+
+    font-size: 13px;
+
+  }
+
+
+
+  section {
+
+    padding-block: 40px;
+
+  }
+
+
+
+  button,
+  .btn {
+
+    width: 100%;
+
+  }
+
+
 }
+
+
+
+
+
+/* =====================================================
+   PERFORMANCE
+===================================================== */
+
 
 .left-card,
 .right-card {
+
+
   will-change: transform;
+
   transform: translate3d(0, 0, 0);
+
   backface-visibility: hidden;
+
+
+}
+
+
+
+
+/* Accessibility */
+
+@media(prefers-reduced-motion:reduce) {
+
+
+  *,
+  *::before,
+  *::after {
+
+
+    animation-duration: .01ms !important;
+
+    transition-duration: .01ms !important;
+
+    scroll-behavior: auto !important;
+
+
+  }
+
+
 }

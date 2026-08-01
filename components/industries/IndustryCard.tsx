@@ -26,8 +26,9 @@ export default function IndustryCard({
                 relative
 
                 flex
-                h-[220px]
+                h-50
                 w-full
+                min-h-50
                 flex-col
                 items-center
                 justify-center
@@ -39,16 +40,19 @@ export default function IndustryCard({
                 border
                 border-white/10
 
-                bg-white/[0.03]
+                bg-white/3
                 backdrop-blur-sm
 
-                p-8
+                p-5
 
                 transition-all
                 duration-500
 
+                sm:h-55
+                sm:p-8
+
                 hover:border-gold/50
-                hover:bg-white/[0.05]
+                hover:bg-white/5
                 hover:shadow-[0_25px_70px_rgba(0,0,0,.35)]
             "
         >
@@ -125,15 +129,17 @@ export default function IndustryCard({
 
             <h3
                 className="
-                    max-w-[160px]
+                    max-w-40
 
                     text-center
 
-                    text-lg
+                    text-base
                     font-bold
                     leading-snug
 
                     text-white
+
+                    sm:text-lg
 
                     transition-colors
                     duration-300
@@ -154,7 +160,7 @@ export default function IndustryCard({
                     bottom-0
                     left-1/2
 
-                    h-[2px]
+                    h-0.5
                     w-0
 
                     -translate-x-1/2

@@ -169,7 +169,7 @@ export default function WhyChoose() {
                         className="
                         mt-6
 
-                        text-3xl
+                        text-[clamp(2rem,5vw,3.75rem)]
 
                         font-black
 
@@ -178,12 +178,6 @@ export default function WhyChoose() {
                         tracking-tight
 
                         text-brand
-
-                        sm:text-4xl
-
-                        md:text-5xl
-
-                        lg:text-6xl
                     "
                     >
                         Built on Trust.

@@ -12,11 +12,11 @@ export default function about() {
     return (
         <section
             id="about"
-            className="bg-white py-24 lg:py-32"
+            className="bg-white py-16 sm:py-20 lg:py-32"
         >
             <div className="container-custom">
 
-                <div className="grid items-center gap-16 lg:grid-cols-2">
+                <div className="grid items-center gap-10 sm:gap-12 lg:grid-cols-2 lg:gap-16">
 
                     {/* LEFT */}
 
@@ -29,7 +29,7 @@ export default function about() {
                                 alt="Coal Mining"
                                 width={900}
                                 height={900}
-                                className="h-[500px] w-full object-cover transition duration-700 hover:scale-105 lg:h-[700px]"
+                                className="h-[320px] w-full object-cover transition duration-700 hover:scale-105 sm:h-[420px] lg:h-[700px]"
                             />
 
                         </div>
@@ -39,23 +39,27 @@ export default function about() {
                         <div
                             className="
               absolute
-              -bottom-8
-              right-6
+              -bottom-5
+              right-3
 
               rounded-3xl
               bg-gold
-              p-8
+              p-5
 
               shadow-2xl
+
+              sm:-bottom-8
+              sm:right-6
+              sm:p-8
 
               lg:right-10
             "
                         >
-                            <h3 className="text-6xl font-black text-brand">
+                            <h3 className="text-4xl font-black text-brand sm:text-5xl lg:text-6xl">
                                 2017
                             </h3>
 
-                            <p className="mt-3 max-w-[180px] text-lg font-medium leading-7 text-brand">
+                            <p className="mt-3 max-w-[150px] text-sm font-medium leading-6 text-brand sm:max-w-[180px] sm:text-lg sm:leading-7">
                                 Founded with a vision to power India's industries.
                             </p>
 
@@ -83,25 +87,21 @@ export default function about() {
                             className="
               mt-6
 
-              text-4xl
+              text-[clamp(2rem,5vw,3.5rem)]
               font-bold
               leading-tight
               tracking-tight
 
               text-brand
-
-              md:text-5xl
-
-              xl:text-6xl
               "
                         >
-                            Powering India's
+                            DELIVERING QUALITY
                             <br />
 
-                            industrial ambition,
+                            RAW MATERIALS & BUILDING,
                             <br />
 
-                            one delivery at a time.
+                            STRONGER INDUSTRIES.
                         </h2>
 
                         {/* Description */}
@@ -110,10 +110,16 @@ export default function about() {
                             className="
               mt-8
 
-              text-lg
-              leading-9
+              text-sm
+              leading-7
 
               text-slate-600
+
+              sm:text-base
+              sm:leading-8
+
+              lg:text-lg
+              lg:leading-9
               "
                         >
                             LAKHDATAAR ASSOCIATES INDIA LLP is a trusted supplier of coal,
@@ -126,7 +132,7 @@ export default function about() {
 
                         {/* Features */}
 
-                        <div className="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2">
+                        <div className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 sm:grid-cols-2 sm:gap-5">
 
                             {features.map((item) => (
                                 <div
@@ -135,7 +141,7 @@ export default function about() {
                                 >
                                     <CheckCircle2 className="h-6 w-6 text-gold" />
 
-                                    <span className="text-lg font-medium text-brand">
+                                    <span className="text-base font-medium text-brand sm:text-lg">
                                         {item}
                                     </span>
                                 </div>
@@ -149,16 +155,19 @@ export default function about() {
                             className="
               group
 
-              mt-12
+              mt-10
 
               flex
               items-center
               gap-3
 
-              text-xl
+              text-lg
               font-semibold
 
               text-brand
+
+              sm:mt-12
+              sm:text-xl
               "
                         >
                             Learn More
