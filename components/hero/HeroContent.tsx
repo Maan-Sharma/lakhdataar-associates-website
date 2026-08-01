@@ -89,9 +89,7 @@ export default function HeroContent() {
             </h1>
 
             <p className="hero-desc mt-8 max-w-xl text-base leading-8 text-white/70 md:text-lg">
-                Lakhdataar Associates India LLP supplies premium industrial raw
-                materials with dependable logistics, transparent pricing, and
-                long-term partnerships across India.
+                India’s trusted supplier of coal, billets, MS scrap and industrial raw materials with pan-India logistics.
             </p>
 
             <div className="hero-buttons mt-10">
