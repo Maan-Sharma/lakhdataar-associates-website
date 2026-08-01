@@ -87,7 +87,25 @@ export default function HeroContent() {
                 <br />
                 INDIA LLP
             </h1>
-
+            <div className="hero-marquee mt-10 overflow-hidden border-y border-white/10 py-4">
+                <div className="marquee-track flex w-max whitespace-nowrap">
+                    {[...Array(2)].map((_, group) => (
+                        <div key={group} className="flex items-center">
+                            {Array.from({ length: 6 }).map((_, index) => (
+                                <span
+                                    key={index}
+                                    className="mx-8 text-lg font-medium uppercase tracking-[0.25em] text-white/60 lg:text-xl"
+                                >
+                                    Fueling Industries.
+                                    <span className="mx-4 text-gold">
+                                        Powering Growth.
+                                    </span>
+                                </span>
+                            ))}
+                        </div>
+                    ))}
+                </div>
+            </div>
             <p className="hero-desc mt-8 max-w-xl text-base leading-8 text-white/70 md:text-lg">
                 India’s trusted supplier of coal, billets, MS scrap and industrial raw materials with pan-India logistics.
             </p>

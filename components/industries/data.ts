@@ -1,17 +1,9 @@
-import {
-    Factory,
-    Landmark,
-    Building2,
-    Package,
-    Zap,
-    Cog,
-    BadgeDollarSign,
-} from "lucide-react";
+import { Bolt, Boxes, Building2, Factory, Pickaxe, Warehouse } from "lucide-react";
 
 export const industries = [
     {
         title: "Power Plants",
-        icon: Zap,
+        icon: Bolt,
     },
     {
         title: "Steel Plants",
@@ -19,22 +11,22 @@ export const industries = [
     },
     {
         title: "Rolling Mills",
-        icon: Cog,
+        icon: Pickaxe,
     },
     {
         title: "Cement Industry",
-        icon: Building2,
+        icon: Warehouse,
     },
     {
         title: "Paper Industry",
-        icon: Package,
+        icon: Boxes,
     },
     {
         title: "Infrastructure",
-        icon: Landmark,
+        icon: Building2,
     },
     {
         title: "Manufacturing",
-        icon: BadgeDollarSign,
+        icon: Factory,
     },
 ];

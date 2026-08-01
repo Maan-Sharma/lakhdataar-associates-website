@@ -127,11 +127,11 @@ export default function Industries() {
                     xl:grid-cols-7
                 "
                 >
-                    {industries.map((item, index) => (
+                    {industries.map((item) => (
                         <IndustryCard
                             key={item.title}
-                            item={item}
-                            index={index}
+                            title={item.title}
+                            icon={item.icon}
                         />
                     ))}
                 </div>

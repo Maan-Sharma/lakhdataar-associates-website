@@ -1,77 +1,116 @@
 "use client";
 
-import { ArrowUpRight } from "lucide-react";
 import { motion } from "framer-motion";
+import { ArrowUpRight } from "lucide-react";
 
 interface WhyCardProps {
     item: {
-        icon: React.ElementType;
         title: string;
         description: string;
+        icon: React.ElementType;
     };
 }
 
 export default function WhyCard({ item }: WhyCardProps) {
-
     const Icon = item.icon;
 
     return (
-
-        <motion.div
-            whileHover={{ y: -8 }}
-            transition={{ duration: 0.3 }}
+        <motion.article
+            whileHover={{
+                y: -12,
+                rotateX: 4,
+                rotateY: -4,
+                transition: {
+                    duration: 0.35,
+                },
+            }}
             className="
                 group
                 relative
 
                 flex
                 h-full
+                min-h-[320px]
+
                 flex-col
 
                 overflow-hidden
 
-                rounded-2xl
-                lg:rounded-[28px]
+                rounded-[30px]
 
                 border
-                border-slate-200
+                border-slate-200/70
 
-                bg-white
+                bg-white/90
 
-                p-5
-                sm:p-6
-                lg:p-8
+                p-6
+
+                shadow-[0_15px_50px_rgba(2,6,23,.06)]
+
+                backdrop-blur-xl
 
                 transition-all
                 duration-500
 
-                hover:border-gold/30
-                hover:shadow-[0_25px_60px_rgba(8,27,51,0.12)]
+                hover:border-gold/50
+                hover:shadow-[0_35px_90px_rgba(8,27,51,.15)]
+
+                sm:p-8
             "
         >
 
-            {/* Background Glow */}
+            {/* Glow */}
 
             <div
                 className="
                     absolute
-                    -right-10
-                    -top-10
 
-                    h-32
-                    w-32
+                    -right-28
+                    -top-28
+
+                    h-72
+                    w-72
 
                     rounded-full
 
-                    bg-gold/5
+                    bg-gold/10
 
-                    blur-3xl
+                    blur-[100px]
 
-                    transition
+                    opacity-0
 
+                    transition-all
                     duration-700
 
-                    group-hover:scale-150
+                    group-hover:opacity-100
+                "
+            />
+
+            {/* Gold Border */}
+
+            <div
+                className="
+                    absolute
+
+                    left-0
+                    top-0
+
+                    h-1
+
+                    w-0
+
+                    bg-gradient-to-r
+
+                    from-gold
+
+                    via-yellow-300
+
+                    to-gold
+
+                    transition-all
+                    duration-700
+
+                    group-hover:w-full
                 "
             />
 
@@ -79,50 +118,55 @@ export default function WhyCard({ item }: WhyCardProps) {
 
             <div
                 className="
+                    relative
+
                     flex
 
-                    h-12
-                    w-12
-
-                    sm:h-14
-                    sm:w-14
-
-                    lg:h-16
-                    lg:w-16
+                    h-16
+                    w-16
 
                     items-center
                     justify-center
 
                     rounded-2xl
 
-                    bg-gold/10
+                    bg-brand
 
                     text-gold
 
-                    transition
+                    transition-all
+                    duration-500
 
-                    group-hover:bg-gold
-                    group-hover:text-white
+                    group-hover:rotate-6
+                    group-hover:scale-110
                 "
             >
-                <Icon className="h-6 w-6 lg:h-8 lg:w-8" />
+                <Icon
+                    className="h-8 w-8"
+                    strokeWidth={1.8}
+                />
             </div>
 
             {/* Title */}
 
             <h3
                 className="
-                    mt-5
+                    mt-8
 
-                    text-base
-                    sm:text-xl
-                    lg:text-2xl
+                    text-xl
 
                     font-bold
 
                     leading-tight
 
                     text-brand
+
+                    transition-colors
+                    duration-300
+
+                    group-hover:text-gold
+
+                    lg:text-2xl
                 "
             >
                 {item.title}
@@ -132,59 +176,114 @@ export default function WhyCard({ item }: WhyCardProps) {
 
             <p
                 className="
-                    mt-4
+                    mt-5
 
                     flex-grow
 
                     text-sm
-                    sm:text-base
 
                     leading-7
 
                     text-slate-500
+
+                    sm:text-base
                 "
             >
                 {item.description}
             </p>
 
-            {/* Learn More */}
+            {/* Footer */}
 
             <div
                 className="
-                    mt-6
+                    mt-8
 
                     flex
 
                     items-center
 
-                    gap-2
-
-                    font-semibold
-
-                    text-brand
-
-                    transition
-
-                    group-hover:text-gold
+                    justify-between
                 "
             >
-                Learn More
-
-                <ArrowUpRight
+                <span
                     className="
-                        h-5
-                        w-5
+                        text-sm
 
-                        transition
+                        font-semibold
 
-                        group-hover:translate-x-1
-                        group-hover:-translate-y-1
+                        uppercase
+
+                        tracking-[0.2em]
+
+                        text-gold
                     "
-                />
+                >
+                    Learn More
+                </span>
+
+                <div
+                    className="
+                        flex
+
+                        h-11
+                        w-11
+
+                        items-center
+                        justify-center
+
+                        rounded-full
+
+                        bg-brand
+
+                        text-white
+
+                        transition-all
+
+                        duration-300
+
+                        group-hover:bg-gold
+                    "
+                >
+                    <ArrowUpRight
+                        className="
+                            h-5
+                            w-5
+
+                            transition-all
+
+                            group-hover:rotate-45
+                        "
+                    />
+                </div>
             </div>
 
-        </motion.div>
+            {/* Decorative */}
 
+            <div
+                className="
+                    absolute
+
+                    bottom-6
+                    right-6
+
+                    h-24
+                    w-24
+
+                    rounded-full
+
+                    border
+
+                    border-gold/10
+
+                    transition-all
+
+                    duration-500
+
+                    group-hover:scale-125
+                    group-hover:border-gold/30
+                "
+            />
+
+        </motion.article>
     );
-
 }

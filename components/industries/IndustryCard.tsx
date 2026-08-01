@@ -2,98 +2,171 @@
 
 import { motion } from "framer-motion";
 
-export default function IndustryCard({
-    item,
-    index,
-}: {
-    item: any;
-    index: number;
-}) {
-    const Icon = item.icon;
+interface IndustryCardProps {
+    title: string;
+    icon: React.ElementType;
+}
 
+export default function IndustryCard({
+    title,
+    icon: Icon,
+}: IndustryCardProps) {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: false, amount: 0.4 }}
+            whileHover={{
+                y: -8,
+                scale: 1.03,
+            }}
             transition={{
-                duration: 0.7,
-                delay: index * 0.08,
+                duration: 0.35,
                 ease: "easeOut",
             }}
-            whileHover={{
-                y: -10,
-                scale: 1.04,
-            }}
             className="
-            group
-            rounded-3xl
-            border
-            border-white/10
-            bg-white/[0.02]
-            backdrop-blur-md
-            p-8
+                group
+                relative
 
-            transition-all
-            duration-500
-
-            hover:border-gold/60
-            hover:bg-white/[0.05]
-            hover:shadow-[0_20px_80px_rgba(0,0,0,.35)]
-        "
-        >
-            <div
-                className="
-                mx-auto
                 flex
-                h-20
-                w-20
+                h-[220px]
+                w-full
+                flex-col
                 items-center
                 justify-center
 
-                rounded-full
+                overflow-hidden
+
+                rounded-[28px]
 
                 border
-                border-gold/40
+                border-white/10
+
+                bg-white/[0.03]
+                backdrop-blur-sm
+
+                p-8
 
                 transition-all
                 duration-500
 
-                group-hover:bg-gold
-                group-hover:scale-110
+                hover:border-gold/50
+                hover:bg-white/[0.05]
+                hover:shadow-[0_25px_70px_rgba(0,0,0,.35)]
             "
-            >
-                <Icon
-                    className="
-                    h-9
-                    w-9
+        >
+            {/* Background Glow */}
 
-                    text-gold
+            <div
+                className="
+                    absolute
+                    -top-16
+                    -right-16
+
+                    h-40
+                    w-40
+
+                    rounded-full
+
+                    bg-gold/10
+
+                    blur-3xl
+
+                    opacity-0
 
                     transition-all
-
                     duration-500
 
-                    group-hover:text-brand
+                    group-hover:opacity-100
                 "
-                />
+            />
+
+            {/* Icon */}
+
+            <div
+                className="
+                    relative
+
+                    mb-8
+
+                    flex
+                    h-20
+                    w-20
+
+                    items-center
+                    justify-center
+
+                    rounded-full
+
+                    border
+                    border-white/25
+
+                    transition-all
+                    duration-500
+
+                    group-hover:border-gold
+                    group-hover:bg-gold/10
+                "
+            >
+                <div
+                    className="
+                        flex
+                        h-10
+                        w-10
+                        items-center
+                        justify-center
+                    "
+                >
+                    <Icon
+                        className="h-full w-full text-gold"
+                        strokeWidth={1.8}
+                    />
+                </div>
             </div>
+
+            {/* Title */}
 
             <h3
                 className="
-                mt-8
+                    max-w-[160px]
 
-                text-center
+                    text-center
 
-                text-xl
+                    text-lg
+                    font-bold
+                    leading-snug
 
-                font-bold
+                    text-white
 
-                text-white
-            "
+                    transition-colors
+                    duration-300
+
+                    group-hover:text-gold
+
+                    sm:text-xl
+                "
             >
-                {item.title}
+                {title}
             </h3>
+
+            {/* Bottom Line */}
+
+            <div
+                className="
+                    absolute
+                    bottom-0
+                    left-1/2
+
+                    h-[2px]
+                    w-0
+
+                    -translate-x-1/2
+
+                    bg-gold
+
+                    transition-all
+                    duration-500
+
+                    group-hover:w-20
+                "
+            />
         </motion.div>
     );
 }

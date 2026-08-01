@@ -293,3 +293,10 @@
   }
 
 }
+
+.left-card,
+.right-card {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+}
