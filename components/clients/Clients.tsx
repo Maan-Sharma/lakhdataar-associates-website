@@ -5,8 +5,13 @@ import ClientCard from "./ClientCard";
 import { clients } from "./data";
 
 export default function Clients() {
-    // Duplicate the array for a seamless infinite marquee
-    const marqueeClients = [...clients, ...clients];
+    // Repeat several times for a perfectly smooth infinite marquee
+    const marqueeClients = [
+        ...clients,
+        ...clients,
+        ...clients,
+        ...clients,
+    ];
 
     return (
         <section className="overflow-hidden bg-slate-50 py-20 lg:py-28">
@@ -14,13 +19,8 @@ export default function Clients() {
 
                 {/* Heading */}
 
-                <motion.div
-                    initial={{ opacity: 0, y: 40 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8 }}
-                    className="mx-auto max-w-4xl text-center"
-                >
+                <div className="mx-auto max-w-4xl text-center">
+
                     <span
                         className="
                         inline-flex
@@ -33,7 +33,6 @@ export default function Clients() {
                         uppercase
                         tracking-[0.35em]
                         text-gold
-                        sm:text-sm
                     "
                     >
                         OUR CLIENTS
@@ -42,17 +41,14 @@ export default function Clients() {
                     <h2
                         className="
                         mt-6
-                        text-3xl
+                        text-4xl
                         font-black
-                        leading-tight
                         text-brand
-
-                        sm:text-5xl
-
+                        md:text-5xl
                         lg:text-6xl
                     "
                     >
-                        Chosen by industry leaders.
+                        Trusted by India's Leading Industries
                     </h2>
 
                     <p
@@ -60,42 +56,39 @@ export default function Clients() {
                         mx-auto
                         mt-6
                         max-w-3xl
-                        text-base
+                        text-lg
                         leading-8
                         text-slate-500
-
-                        sm:text-lg
-
-                        lg:text-xl
                     "
                     >
-                        A partial list of trusted companies that rely on us
-                        for raw materials and logistics across India.
+                        Our long-term partnerships reflect the trust
+                        we've built across steel, cement, power and
+                        infrastructure sectors.
                     </p>
-                </motion.div>
+
+                </div>
 
                 {/* Marquee */}
 
                 <div className="relative mt-16 overflow-hidden">
 
                     {/* Left Fade */}
-                    <div className="pointer-events-none absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent" />
+
+                    <div className="absolute left-0 top-0 z-20 h-full w-24 bg-gradient-to-r from-slate-50 to-transparent" />
 
                     {/* Right Fade */}
-                    <div className="pointer-events-none absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent" />
+
+                    <div className="absolute right-0 top-0 z-20 h-full w-24 bg-gradient-to-l from-slate-50 to-transparent" />
 
                     <motion.div
-                        className="flex gap-8"
+                        className="flex w-max items-center gap-6"
                         animate={{
-                            x: ["0%", "-50%"],
+                            x: ["0%", "-25%"],
                         }}
                         transition={{
-                            duration: 30,
+                            duration: 55,
                             ease: "linear",
                             repeat: Infinity,
-                        }}
-                        whileHover={{
-                            animationPlayState: "paused",
                         }}
                     >
                         {marqueeClients.map((client, index) => (
@@ -105,6 +98,7 @@ export default function Clients() {
                             />
                         ))}
                     </motion.div>
+
                 </div>
 
             </div>
