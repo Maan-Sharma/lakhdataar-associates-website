@@ -1,0 +1,106 @@
+"use client";
+
+import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
+
+import { quickLinks, services } from "./data";
+
+type Props = {
+    title: string;
+    type: "quick" | "services";
+};
+
+export default function FooterLinks({
+    title,
+    type,
+}: Props) {
+    const items =
+        type === "quick"
+            ? quickLinks
+            : services;
+
+    return (
+        <div>
+
+            <h3
+                className="
+                text-lg
+                font-bold
+                uppercase
+                tracking-[0.12em]
+                text-white
+            "
+            >
+                {title}
+            </h3>
+
+            <ul className="mt-8 space-y-5">
+
+                {items.map((item) => (
+
+                    <li key={item}>
+
+                        <Link
+                            href="#"
+                            className="
+                                group
+                                flex
+                                items-center
+                                justify-between
+
+                                text-[16px]
+                                text-white/70
+
+                                transition-all
+                                duration-300
+
+                                hover:text-gold
+                            "
+                        >
+                            <span
+                                className="
+                                    relative
+
+                                    after:absolute
+                                    after:bottom-[-4px]
+                                    after:left-0
+
+                                    after:h-[1px]
+                                    after:w-0
+
+                                    after:bg-gold
+
+                                    after:transition-all
+                                    after:duration-300
+
+                                    group-hover:after:w-full
+                                "
+                            >
+                                {item}
+                            </span>
+
+                            <ArrowUpRight
+                                size={16}
+                                className="
+                                    -translate-x-2
+                                    opacity-0
+
+                                    transition-all
+                                    duration-300
+
+                                    group-hover:translate-x-0
+                                    group-hover:opacity-100
+                                "
+                            />
+
+                        </Link>
+
+                    </li>
+
+                ))}
+
+            </ul>
+
+        </div>
+    );
+}
