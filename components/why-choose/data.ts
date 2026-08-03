@@ -25,7 +25,7 @@ export const whyChoose = [
     {
         number: "03",
         icon: Users,
-        title: "500+ Happy Clients",
+        title: "50+ Happy Clients",
         description:
             "Trusted by power plants, steel mills, cement manufacturers and industrial enterprises.",
     },
@@ -46,8 +46,8 @@ export const whyChoose = [
     {
         number: "06",
         icon: Globe2,
-        title: "Global Sourcing",
+        title: "Sourcing",
         description:
-            "Access to trusted Indonesian, Australian and South African coal suppliers.",
+            "Access To Trusted Coal Suppliers ECL | NCL | CCL | BCCL | SECL | APMDC",
     },
 ];

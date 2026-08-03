@@ -10,7 +10,7 @@ export default function CTA() {
             {/* Background */}
 
             <Image
-                src="/cta-bg.jpg"
+                src="/cta.jpg"
                 alt="CTA Background"
                 fill
                 priority
