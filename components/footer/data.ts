@@ -42,14 +42,12 @@ export const socials = [
 
 export const contact = {
     address: [
-        "Arch Square X2",
-        "Suite 601 & 602",
-        "EP & Y1, Sector V",
-        "Salt Lake City",
-        "Kolkata - 700091",
+        "Arch Square X2, Suite 601 & 602,",
+        "EP & Y1, Sector V, Salt Lake City,",
+        "Kolkata – 700091",
     ],
 
-    phone: "+91 90388 19066",
+    phone: "+91 99038 11311",
 
     email: "sales.lakhdataar@gmail.com",
 };

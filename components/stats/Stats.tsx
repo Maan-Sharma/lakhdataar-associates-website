@@ -6,11 +6,11 @@ const stats = [
         label: "Years of Excellence",
     },
     {
-        value: "500+",
+        value: "50+",
         label: "Trusted Clients",
     },
     {
-        value: "10M+",
+        value: "500K+",
         label: "Tonnes Supplied",
     },
     {

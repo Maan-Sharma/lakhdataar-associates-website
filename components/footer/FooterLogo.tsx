@@ -1,5 +1,7 @@
 "use client";
 
+import logo from "../../public/mainlogo.jpeg";
+import Image from "next/image";
 import Link from "next/link";
 import {
     FaLinkedinIn,
@@ -12,42 +14,25 @@ export default function FooterLogo() {
     return (
         <div>
 
-            {/* Logo */}
-
             <Link
                 href="/"
                 className="flex items-center gap-4"
             >
-                <div
+                <Image
+                    src={logo}
+                    alt="Lakhdataar Associates India LLP"
+                    width={180}
+                    height={60}
                     className="
-                    flex
-                    h-14
-                    w-14
-                    items-center
-                    justify-center
-                    rounded-xl
-                    border
-                    border-gold/30
-                    bg-white/5
-                "
-                >
-                    <span className="text-2xl font-black text-gold">
-                        L
-                    </span>
-                </div>
+            h-12
+            w-auto
 
-                <div>
+            sm:h-14
 
-                    <h3 className="text-xl font-black uppercase tracking-wide">
-                        Lakhdataar
-                    </h3>
-
-                    <p className="mt-1 text-xs uppercase tracking-[0.28em] text-gold">
-                        Associates India LLP
-                    </p>
-
-                </div>
-
+            lg:h-16
+        "
+                    priority
+                />
             </Link>
 
             {/* Description */}
