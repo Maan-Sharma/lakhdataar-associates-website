@@ -524,7 +524,7 @@ svg {
 
 
 
-  button,
+  button.btn-block,
   .btn {
 
     width: 100%;
@@ -579,4 +579,15 @@ svg {
   }
 
 
+}
+
+/* Hide Horizontal Scrollbar */
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }

@@ -51,7 +51,7 @@ export default function Team() {
                         grid
                         gap-8
                         md:grid-cols-2
-                        xl:grid-cols-3
+                        xl:grid-cols-2
                     "
                 >
                     {teamMembers.map((member) => (
