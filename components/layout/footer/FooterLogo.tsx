@@ -1,6 +1,5 @@
 "use client";
 
-import logo from "../../public/mainlogo.jpeg";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -19,7 +18,7 @@ export default function FooterLogo() {
                 className="flex items-center gap-4"
             >
                 <Image
-                    src={logo}
+                    src="/mainlogo.jpeg"
                     alt="Lakhdataar Associates India LLP"
                     width={180}
                     height={60}

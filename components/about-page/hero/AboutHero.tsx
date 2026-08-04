@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function AboutHero() {
     return (
-        <section className="relative h-[520px] overflow-hidden lg:h-[620px]">
+        <section className="relative h-105 overflow-hidden sm:h-115 lg:h-130">
 
             {/* Background Image */}
 
@@ -33,9 +33,9 @@ export default function AboutHero() {
 
                     <div className="max-w-4xl">
 
-                        <div className="inline-flex rounded-full border border-gold/40 bg-white/5 px-5 py-2 backdrop-blur-md">
+                        <div className="inline-flex rounded-full border border-gold/40 bg-white/5 px-4 py-2 backdrop-blur-md sm:px-5">
 
-                            <span className="text-xs font-semibold uppercase tracking-[0.35em] text-gold">
+                            <span className="text-[10px] font-semibold uppercase tracking-[0.3em] text-gold sm:text-xs">
                                 About Us
                             </span>
 
@@ -43,21 +43,23 @@ export default function AboutHero() {
 
                         <h1
                             className="
-                            mt-8
+                            mt-6
 
-                            text-[2.8rem]
+                            text-[2rem]
 
                             font-black
 
-                            leading-[0.95]
+                            leading-none
 
                             tracking-tight
 
                             text-white
 
-                            sm:text-6xl
+                            sm:mt-8
 
-                            lg:text-7xl
+                            sm:text-5xl
+
+                            lg:text-6xl
                         "
                         >
                             Fueling India's
@@ -67,17 +69,23 @@ export default function AboutHero() {
 
                         <p
                             className="
-                            mt-8
+                            mt-5
 
                             max-w-2xl
 
-                            text-lg
+                            text-sm
 
-                            leading-9
+                            leading-7
 
                             text-white/80
 
-                            lg:text-2xl
+                            sm:mt-7
+
+                            sm:text-base
+
+                            sm:leading-8
+
+                            lg:text-lg
                         "
                         >
                             A story of trust, transparency and relentless
