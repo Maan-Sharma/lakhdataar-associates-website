@@ -11,4 +11,5 @@ export type GalleryCategory =
     | "Billets"
     | "Scrap"
     | "Logistics"
-    | "Industry";
+    | "Industry"
+    | "Office";

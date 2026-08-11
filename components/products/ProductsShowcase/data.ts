@@ -54,7 +54,7 @@ export const products: Product[] = [
         id: 3,
         slug: "scrap",
         title: "MS Scrap Supply",
-        image: "/cta.jpg",
+        image: "/about.jpg",
         description:
             "Industrial MS scrap including heavy melting scrap, shredded scrap and structural scrap supplied with complete transparency and quality assurance.",
 
@@ -78,7 +78,7 @@ export const products: Product[] = [
         id: 4,
         slug: "logistics",
         title: "Industrial Logistics",
-        image: "/about.jpg",
+        image: "/cta.jpg",
         description:
             "Complete logistics solutions including rail rake management, road transportation, bulk cargo handling and end-to-end supply chain support.",
 

@@ -11,7 +11,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 2,
-        src: "/coal2.png",
+        src: "/about.jpg",
         title: "Coal Loading & Dispatch",
         category: "Coal",
         description:
@@ -19,7 +19,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 3,
-        src: "/billets.png",
+        src: "/billets.jpg",
         title: "Steel Billet Production",
         category: "Billets",
         description:
@@ -27,7 +27,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 4,
-        src: "/scrap.png",
+        src: "/Rolling.png",
         title: "Industrial Scrap Yard",
         category: "Scrap",
         description:
@@ -35,7 +35,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 5,
-        src: "/logistics.png",
+        src: "/cta.jpg",
         title: "Warehouse Logistics",
         category: "Logistics",
         description:
@@ -43,7 +43,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 6,
-        src: "/industry.png",
+        src: "/industry.jpg",
         title: "Manufacturing Facility",
         category: "Industry",
         description:
@@ -58,4 +58,5 @@ export const galleryCategories = [
     "Scrap",
     "Logistics",
     "Industry",
+    "Office"
 ];

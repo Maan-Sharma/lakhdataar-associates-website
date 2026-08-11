@@ -14,6 +14,7 @@ const categories = [
     "Scrap",
     "Logistics",
     "Industry",
+    "Office",
 ];
 
 export default function GalleryFilter() {
