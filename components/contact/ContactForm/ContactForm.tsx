@@ -123,7 +123,7 @@ export default function ContactForm() {
                                     href="tel:+919038819066"
                                     className="mt-1 block text-base font-medium text-[#071d38] transition hover:text-[#c89d13] sm:text-lg"
                                 >
-                                    +91 90388 19066
+                                    +91 9903811311
                                 </a>
 
                                 <p className="mt-1 text-xs text-slate-500 sm:text-sm">
@@ -407,8 +407,8 @@ export default function ContactForm() {
                         {status.message && (
                             <div
                                 className={`rounded-md px-4 py-3 text-sm leading-6 ${status.type === "success"
-                                        ? "border border-green-200 bg-green-50 text-green-700"
-                                        : "border border-red-200 bg-red-50 text-red-700"
+                                    ? "border border-green-200 bg-green-50 text-green-700"
+                                    : "border border-red-200 bg-red-50 text-red-700"
                                     }`}
                             >
                                 {status.message}
