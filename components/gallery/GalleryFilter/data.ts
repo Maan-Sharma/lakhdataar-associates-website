@@ -48,6 +48,31 @@ export const galleryImages: GalleryImage[] = [
         category: "Industry",
         description:
             "Industrial production facility supplying leading businesses.",
+
+    },
+    {
+        id: 7,
+        src: "/office-gallery-1.jpg",
+        title: "Operations Workspace",
+        category: "Office",
+        description:
+            "A modern, well-equipped corporate workspace designed to support collaboration, focused decision-making and efficient day-to-day operations.",
+    },
+    {
+        id: 8,
+        src: "/office-gallery-2.jpg",
+        title: "Executive & Meeting Area",
+        category: "Office",
+        description:
+            "Dedicated workspaces designed for focused operations, client coordination and efficient handling of industrial supply activities.",
+    },
+    {
+        id: 9,
+        src: "/office-gallery-3.jpg",
+        title: "Private Workspaces",
+        category: "Office",
+        description:
+            "An open and collaborative office environment where teams work together to coordinate sourcing, logistics and customer requirements.",
     },
 ];
 
