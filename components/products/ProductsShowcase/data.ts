@@ -54,7 +54,7 @@ export const products: Product[] = [
         id: 3,
         slug: "scrap",
         title: "MS Scrap Supply",
-        image: "/about.jpg",
+        image: "/scrap.jpg",
         description:
             "Industrial MS scrap including heavy melting scrap, shredded scrap and structural scrap supplied with complete transparency and quality assurance.",
 
