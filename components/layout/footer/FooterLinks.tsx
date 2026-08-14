@@ -10,6 +10,25 @@ type Props = {
     type: "quick" | "services";
 };
 
+const quickLinkRoutes: Record<string, string> = {
+    "Home": "/",
+    "About Us": "/about",
+    "Products & Services": "/products",
+    "Industries": "/industries",
+    "Clients": "/clients",
+    "Gallery": "/gallery",
+    "Contact": "/contact",
+};
+
+const serviceRoutes: Record<string, string> = {
+    "Coal Supply": "/products-services/coal-supply",
+    "Billets Trading": "/products-services/billets-trading",
+    "MS Scrap Supply": "/products-services/ms-scrap-supply",
+    "Industrial Logistics": "/products-services/industrial-logistics",
+    "Railway Rake Handling": "/products-services/railway-rake-handling",
+    "Bulk Material Transport": "/products-services/bulk-material-transport",
+};
+
 export default function FooterLinks({
     title,
     type,
@@ -19,17 +38,22 @@ export default function FooterLinks({
             ? quickLinks
             : services;
 
+    const routes =
+        type === "quick"
+            ? quickLinkRoutes
+            : serviceRoutes;
+
     return (
         <div>
 
             <h3
                 className="
-                text-lg
-                font-bold
-                uppercase
-                tracking-[0.12em]
-                text-white
-            "
+                    text-lg
+                    font-bold
+                    uppercase
+                    tracking-[0.12em]
+                    text-white
+                "
             >
                 {title}
             </h3>
@@ -41,7 +65,7 @@ export default function FooterLinks({
                     <li key={item}>
 
                         <Link
-                            href="#"
+                            href={routes[item] || "#"}
                             className="
                                 group
                                 flex
@@ -57,6 +81,7 @@ export default function FooterLinks({
                                 hover:text-gold
                             "
                         >
+
                             <span
                                 className="
                                     relative

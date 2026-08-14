@@ -1,9 +1,11 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import Image from "next/image";
 import { ArrowRight, Phone } from "lucide-react";
 
 export default function CTA() {
+    const router = useRouter();
     return (
         <section className="relative h-[650px] overflow-hidden">
 
@@ -87,6 +89,7 @@ export default function CTA() {
                     {/* Buttons */}
 
                     <div
+
                         className="
                         mt-12
                         flex
@@ -100,6 +103,7 @@ export default function CTA() {
                     >
 
                         <button
+                            onClick={() => router.push("/contact")}
                             className="
                             flex
                             h-16
@@ -121,6 +125,7 @@ export default function CTA() {
                         </button>
 
                         <button
+                            onClick={() => router.push("tel:+919903811311")}
                             className="
                             flex
                             h-16

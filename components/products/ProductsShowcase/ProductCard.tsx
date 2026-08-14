@@ -1,6 +1,10 @@
+"use client";
+
 import Image from "next/image";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Product } from "./types";
+import { useRouter } from "next/navigation";
+
 
 interface ProductCardProps {
     product: Product;
@@ -8,9 +12,12 @@ interface ProductCardProps {
 }
 
 export default function ProductCard({
+
     product,
     reverse = false,
 }: ProductCardProps) {
+    const router = useRouter();
+
     return (
         <section
             className={`grid items-center gap-10 lg:gap-16 ${reverse ? "lg:grid-cols-[1.1fr_0.9fr]" : "lg:grid-cols-[0.9fr_1.1fr]"
@@ -104,7 +111,8 @@ export default function ProductCard({
                 </div>
 
                 {/* Button */}
-                <button className="mt-10 inline-flex items-center gap-2 rounded-xl bg-[#0F2747] px-6 py-3 font-semibold text-white transition hover:bg-[#173A63]">
+                <button onClick={() => router.push("/contact")}
+                    className="mt-10 inline-flex items-center gap-2 rounded-xl bg-[#0F2747] px-6 py-3 font-semibold text-white transition hover:bg-[#173A63]">
                     Enquire Now
 
                     <ArrowRight size={18} />

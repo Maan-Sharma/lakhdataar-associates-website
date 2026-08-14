@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -13,6 +14,7 @@ interface WhyCardProps {
 
 export default function WhyCard({ item }: WhyCardProps) {
     const Icon = item.icon;
+    const router = useRouter();
 
     return (
         <motion.article
@@ -209,6 +211,7 @@ export default function WhyCard({ item }: WhyCardProps) {
                 "
             >
                 <span
+                    onClick={() => router.push("/about")}
                     className="
                         text-sm
 
@@ -225,6 +228,7 @@ export default function WhyCard({ item }: WhyCardProps) {
                 </span>
 
                 <div
+
                     className="
                         flex
 

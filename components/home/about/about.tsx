@@ -1,4 +1,7 @@
+"use client";
+
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 const features = [
@@ -9,6 +12,8 @@ const features = [
 ];
 
 export default function about() {
+    const router = useRouter();
+
     return (
         <section
             id="about"
@@ -152,6 +157,7 @@ export default function about() {
                         {/* CTA */}
 
                         <button
+                            onClick={() => router.push("/about")}
                             className="
               group
 

@@ -1,6 +1,8 @@
 import { ArrowRight, Phone } from "lucide-react";
-
+import { useRouter } from "next/navigation";
 export default function HeroButtons() {
+
+    const router = useRouter();
     return (
         <div
             className="
@@ -19,6 +21,7 @@ export default function HeroButtons() {
             {/* Request Quote */}
 
             <button
+                onClick={() => router.push("/contact")}
                 aria-label="Request a Quote"
                 className="
                     group
@@ -68,6 +71,7 @@ export default function HeroButtons() {
                 "
             >
 
+
                 <span className="whitespace-nowrap">
                     Request a Quote
                 </span>
@@ -93,6 +97,7 @@ export default function HeroButtons() {
             {/* Explore Products */}
 
             <button
+                onClick={() => router.push("/contact")}
                 aria-label="Explore Products"
                 className="
                     group

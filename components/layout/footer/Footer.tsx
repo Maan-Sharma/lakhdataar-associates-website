@@ -63,11 +63,8 @@ export default function Footer() {
                     className="
                         grid
                         gap-14
-
                         py-20
-
                         sm:grid-cols-2
-
                         lg:grid-cols-4
                     "
                 >
@@ -75,6 +72,7 @@ export default function Footer() {
                         <FooterLogo />
                     </div>
 
+                    {/* QUICK LINKS */}
                     <div className="footer-column">
                         <FooterLinks
                             title="Quick Links"
@@ -82,6 +80,7 @@ export default function Footer() {
                         />
                     </div>
 
+                    {/* SERVICES */}
                     <div className="footer-column">
                         <FooterLinks
                             title="Our Services"
