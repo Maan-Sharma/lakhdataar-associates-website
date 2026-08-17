@@ -54,7 +54,7 @@ export default function FooterLogo() {
 
             {/* Social */}
 
-            <div className="mt-8 flex gap-4">
+            {/* <div className="mt-8 flex gap-4">
                 <SocialButton
                     href="#"
                     icon={<FaLinkedinIn size={18} />}
@@ -75,7 +75,7 @@ export default function FooterLogo() {
                     icon={<FaInstagram size={18} />}
                 />
 
-            </div>
+            </div> */}
 
         </div>
     );

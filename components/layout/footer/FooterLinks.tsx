@@ -21,12 +21,12 @@ const quickLinkRoutes: Record<string, string> = {
 };
 
 const serviceRoutes: Record<string, string> = {
-    "Coal Supply": "/products-services/coal-supply",
-    "Billets Trading": "/products-services/billets-trading",
-    "MS Scrap Supply": "/products-services/ms-scrap-supply",
-    "Industrial Logistics": "/products-services/industrial-logistics",
-    "Railway Rake Handling": "/products-services/railway-rake-handling",
-    "Bulk Material Transport": "/products-services/bulk-material-transport",
+    "Coal Supply": "/products",
+    "Billets Trading": "/products",
+    "MS Scrap Supply": "/products",
+    "Industrial Logistics": "/products",
+    "Railway Rake Handling": "/products",
+    "Bulk Material Transport": "/products",
 };
 
 export default function FooterLinks({

@@ -54,7 +54,7 @@ export default function FooterBottom() {
                 "
             >
                 <Link
-                    href="/privacy-policy"
+                    href="#"
                     className="
                         transition-colors
                         duration-300
@@ -66,7 +66,7 @@ export default function FooterBottom() {
                 </Link>
 
                 <Link
-                    href="/terms"
+                    href="#"
                     className="
                         transition-colors
                         duration-300
@@ -110,7 +110,7 @@ export default function FooterBottom() {
                 by
 
                 <Link
-                    href="https://kernelhive.com"
+                    href="https://www.linkedin.com/company/kernelhive"
                     className="
                         font-semibold
                         text-gold
