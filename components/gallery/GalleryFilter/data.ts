@@ -68,7 +68,7 @@ export const galleryImages: GalleryImage[] = [
     },
     {
         id: 9,
-        src: "/office-gallery-3.jpg",
+        src: "/office-gallery-5.jpg",
         title: "Private Workspaces",
         category: "Office",
         description:
